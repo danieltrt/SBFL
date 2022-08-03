@@ -1,0 +1,5 @@
+def scalarProductMat ( mat, k ) :
+    for i in range ( N ) :
+        for j in range ( N ) :
+            mat [ i ] [ j ] = mat [ i ] [ j ] * k
+    

@@ -1,0 +1,10 @@
+def check ( st ) :
+    n = len ( st )
+    oddDigSum = 0
+    evenDigSum = 0
+    for i in range ( 0, n ) :
+        if ( i % 2 == 0 ) :
+            oddDigSum = oddDigSum + ( ( int ) ( st [ i ] ) )
+        else :
+            evenDigSum = evenDigSum + ( ( int ) ( st [ i ] ) )
+    return ( ( oddDigSum - evenDigSum ) % 11 == 0 )

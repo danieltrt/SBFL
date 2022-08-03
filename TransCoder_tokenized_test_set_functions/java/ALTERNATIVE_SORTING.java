@@ -1,0 +1,9 @@
+static void alternateSort ( int arr [ ], int n ) {
+  Arrays . sort ( arr );
+  int i = 0, j = n - 1;
+  while ( i < j ) {
+    System . out . print ( arr [ j -- ] + " " );
+    System . out . print ( arr [ i ++ ] + " " );
+  }
+  if ( n % 2 != 0 ) System . out . print ( arr [ i ] );
+}
