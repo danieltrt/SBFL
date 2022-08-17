@@ -4,7 +4,8 @@ static int findMaxAverage ( int [ ] arr, int n, int k ) {
   csum [ 0 ] = arr [ 0 ];
   for ( int i = 1;
   i < n;
-  i ++ ) csum [ i ] = csum [ i - 1 ] + arr [ i ];
+  i ++ )
+    csum [ i ] = csum [ i - 1 ] + arr [ i ];
   int max_sum = csum [ k - 1 ], max_end = k - 1;
   for ( int i = k;
   i < n;

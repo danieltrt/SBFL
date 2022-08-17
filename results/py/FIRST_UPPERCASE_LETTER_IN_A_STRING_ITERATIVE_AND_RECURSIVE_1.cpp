@@ -1,0 +1,2 @@
+int f_filled ( string str , int i ) {
+  if ( ( str [ i ] == '\0' ) || ( str [ i ] == ' ' ) || ( str [ i ] == '\t' ) || ( str [ i ] == '\n' ) || ( str [ i ] == ' ' ) || ( str [ i ] == '\v' ) || ( str [ i ] == '\f' ) || ( str [ i ] == '\f' ) || ( str [ i ] == '\n' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i ] == '\0' ) || ( str [ i

@@ -3,7 +3,8 @@ public static int countPairs ( int arr [ ], int n ) {
   for ( int i = 0;
   i < n;
   i ++ ) {
-    if ( hm . containsKey ( arr [ i ] ) ) hm . put ( arr [ i ], hm . get ( arr [ i ] ) + 1 );
+    if ( hm . containsKey ( arr [ i ] ) )
+    hm . put ( arr [ i ], hm . get ( arr [ i ] ) + 1 );
     else hm . put ( arr [ i ], 1 );
   }
   int ans = 0;

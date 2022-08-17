@@ -1,0 +1,6 @@
+long long f_filled ( int n ) {
+  if ( n < 0 ) return 0 ;
+  if ( n <= 1 ) return 1 ;
+  double x = ( n * log10 ( n / M_E ) + log10 ( 2 * M_PI * n ) / 2.0 ) ;
+  return ( long long ) floor ( x ) + 1 ;
+}

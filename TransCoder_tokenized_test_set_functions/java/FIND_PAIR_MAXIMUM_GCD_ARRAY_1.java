@@ -2,20 +2,24 @@ public static int findMaxGCD ( int arr [ ], int n ) {
   int high = 0;
   for ( int i = 0;
   i < n;
-  i ++ ) high = Math . max ( high, arr [ i ] );
+  i ++ )
+    high = Math . max ( high, arr [ i ] );
   int count [ ] = new int [ high + 1 ];
   for ( int i = 0;
   i < n;
-  i ++ ) count [ arr [ i ] ] ++;
+  i ++ )
+    count [ arr [ i ] ] ++;
   int counter = 0;
   for ( int i = high;
   i >= 1;
   i -- ) {
     int j = i;
     while ( j <= high ) {
-      if ( count [ j ] > 0 ) counter += count [ j ];
+      if ( count [ j ] > 0 )
+        counter += count [ j ];
       j += i;
-      if ( counter == 2 ) return i;
+      if ( counter == 2 )
+        return i;
     }
     counter = 0;
   }

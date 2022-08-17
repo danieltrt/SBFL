@@ -1,0 +1,46 @@
+int maximumChars ( string str1 ) {
+  int n = str1 . length ( ) ;
+  int res = - 1 ;
+  int firstInd [ MAX_CHAR ] ;
+  for ( int i = 0 ;
+  i < MAX_CHAR ;
+  i ++ ) {
+    int firstInd [ MAX_CHAR ] ;
+    firstInd [ i ] = - 1 ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i ;
+    firstInd [ i ] = i

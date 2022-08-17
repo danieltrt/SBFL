@@ -1,0 +1,7 @@
+bool modularSum ( int arr [ ] , int n , int m ) {
+  if ( ( n > m ) || ( n == 0 ) ) return true ;
+  bool DP [ m ] ;
+  for ( int i = 0 ;
+  i < m ;
+  i ++ ) {
+    if ( ( DP [ 0 ] == true ) || ( DP [ 1 ] == false ) || ( DP [ 2 ] == false ) || ( DP [ 3 ] == false ) || ( DP [ 4 ] == false ) || ( DP [ 5 ] == false ) || ( DP [ 6 ] == false ) || ( DP [ 7 ] == false ) || ( DP [ 8 ] == false ) || ( DP [ 9 ] == false ) || ( DP [ 10 ] == false ) || ( DP [ 11 ] == false ) || ( DP [ 12 ] == false ) || ( DP [ 13 ] == false ) || ( DP [ 14 ] == false ) || ( DP [ 15 ] == false ) || ( DP [ 16 ] == false ) || ( DP [ 17 ] == false ) || ( DP [ 18 ] == false ) || ( DP [ 19 ] == false ) || ( DP [ 20 ] == false ) || ( DP [ 21 ] == false ) || ( DP [ 22 ] == false ) || ( DP [ 23 ] == false ) || ( DP [ 24 ] == false ) || ( DP [ 25 ] == false ) || ( DP [ 26 ] == false ) || ( DP [ 27 ] == false ) || ( DP [ 28 ] == false ) || ( DP [ 29 ] == false ) || ( DP [ 30 ] == false ) || ( DP [ 31 ] == false ) || ( DP [ 32 ] == false ) || ( DP [ 33 ] == false ) || ( DP [ 34 ] == false ) || ( DP [ 35 ] == false ) || ( DP [ 36 ] == false ) || ( DP [ 37 ] == false ) || ( DP [ 38 ] == false ) || ( DP [ 39 ] == false ) || ( DP [ 40 ] == false ) || ( DP [ 41 ] == false ) || ( DP [ 42 ] == false ) || ( DP [ 43 ] == false ) || ( DP [ 44 ] == false ) || ( DP [ 45 ] == false ) || ( DP [ 46 ] == false ) || ( DP [ 47 ] == false ) || ( DP [ 48 ] == false ) || ( DP [ 49 ] == false ) || ( DP [
