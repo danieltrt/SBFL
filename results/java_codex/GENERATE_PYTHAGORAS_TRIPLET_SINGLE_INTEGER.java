@@ -1,0 +1,17 @@
+void evaluate ( int n ) {
+  if ( n == 1 || n == 2 ) cout << "No Pythagoras " << "Triplet exists" << endl;
+  else if ( n % 2 == 0 ) {
+    int var = 1 * n * n / 4;
+    cout << "Pythagoras Triplets " << "exist i.e. " << endl;
+    cout << n << " ";
+    cout << var - 1 << " ";
+    cout << var + 1 << " " << endl;
+  }
+  else if ( n % 2 != 0 ) {
+    int var = 1 * n * n + 1;
+    cout << "Pythagoras Triplets " << "exist i.e. " << endl;
+    cout << n << " ";
+    cout << var / 2 - 1 << " ";
+    cout << var / 2 << " " << endl;
+  }
+}

@@ -43,7 +43,7 @@ def execute_test(file_name, test_number, function_name):
 
     statistics = defaultdict(int)
     it = 0
-    while frame.GetFunction().GetDisplayName() != "main" and thread.GetStopReason() != lldb.eStopReasonException and it < 1e5:
+    while frame.GetFunction().GetDisplayName() != "main" and thread.GetStopReason() != lldb.eStopReasonException and it < 1e3:
         # print(frame.vars)
         it += 1
         statistics[frame.GetLineEntry().GetLine()] += 1
@@ -101,29 +101,42 @@ def compute_benchmark(benchmark, solution, formula):
 
 
 def tarantula(failed, passed, tests_failed, tests_passed):
+    if tests_passed == 0:
+        return 0
     return (failed / tests_failed) / (failed / tests_failed + passed / tests_passed)
 
 def ochiai(failed, _, tests_failed, tests_passed):
+    if math.sqrt(tests_failed * (tests_failed + tests_passed)) == 0:
+        return float("inf")
     return failed / math.sqrt(tests_failed * (tests_failed + tests_passed))
 
 def op2(failed, passed, _, tests_passed):
+    if (tests_passed + 1) == 0:
+        return float("inf")
     return failed - passed / (tests_passed + 1)
 
 def barinel(failed, passed, _, _2):
+    if (passed + failed) == 0:
+        return float("inf")
+
     return 1 - passed / (passed + failed)
 
 def d_star(failed, passed, tests_failed, _):
+    if (passed + (tests_failed - failed)) == 0:
+        return float("inf")
     return failed / (passed + (tests_failed - failed))
 
 if __name__ == "__main__":
 
     benchmarks_path = "/Users/drramos/PycharmProjects/SBFL_CPP/benchmarks/java/"
     files = [benchmarks_path + file for file in os.listdir(benchmarks_path) if ".cpp" in file]
-    correct = 0
 
     for formula in [tarantula, ochiai, op2, barinel, d_star]:
+        correct = 0
         print("Testing", formula.__name__)
         for benchmark in files:
             correct += compute_benchmark(benchmark, benchmark.replace("/java/", "/java/java_annotations/"), formula)
         print("Got it right", correct, "times.")
 
+
+    # get the fault localization using our own approach

@@ -1,0 +1,2 @@
+No subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundSum found between indexes 1 and 1
+Sum found between indexes 1 and 1No subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray foundNo subarray found#Results: 10, 10

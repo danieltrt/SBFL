@@ -2,7 +2,9 @@ import os
 import openai
 import os
 openai.organization = "org-NGeM7xd8YkcTE8569zCd785t"
-openai.api_key = "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"
+openai.api_key = "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"
+import tqdm
+import time
 
 
 def translate(code, path):
@@ -18,7 +20,7 @@ def translate(code, path):
       model="code-davinci-002",
       prompt=prompt,
       temperature=0,
-      max_tokens=200,
+      max_tokens=1000,
       top_p=1.0,
       frequency_penalty=0.0,
       presence_penalty=0.0,
@@ -27,16 +29,27 @@ def translate(code, path):
 
     with open(path, "a+") as f2:
         for res in response["choices"]:
-            print(path, res["text"])
-            f.write(res["text"])
+            f2.write(res["text"].strip())
 
-    input("next?")
 
 
 dest = "/Users/drramos/PycharmProjects/SBFL_CPP/playground/java_codex"
 files = os.listdir("./")
-for file in files:
-    src = os.path.join(os.getcwd(), file)
-    with open(src, "r+") as f:
-        code = f.read()
-        translate(code, os.path.join(dest, file))
+files = list(filter(lambda x: ".java" in x, files))
+count = 0
+for file in tqdm.tqdm(files):
+    if count < 130:
+        count += 1
+        continue
+
+    while True:
+        try:
+            src = os.path.join(os.getcwd(), file)
+            with open(src, "r+") as f:
+                code = f.read()
+                translate(code, os.path.join(dest, file))
+            break
+        except:
+            time.sleep(60)
+
+
